@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>MetoSports</title>
 <style>
-/* Allgemeine Stile */
 * {
 margin: 0;
 padding: 0;
@@ -19,11 +18,10 @@ color: #fff;
 line-height: 1.6;
 }
 
-/* Header-Bereich */
 header {
 position: relative;
 height: 100vh;
-background: url('https://www.wallpaperflare.com/lebron-james-slamdunk-wallpaper-lebron-james-nba-basketball-wallpaper-205709') no-repeat center center/cover;
+background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
 }
 
 .overlay {
@@ -35,7 +33,6 @@ bottom: 0;
 background: rgba(0, 0, 0, 0.6);
 }
 
-/* Navigation */
 nav {
 position: absolute;
 top: 20px;
@@ -58,7 +55,17 @@ nav a:hover {
 color: orange;
 }
 
-/* Hero-Inhalt */
+.logo-container {
+position: absolute;
+top: 20px;
+left: 20px;
+z-index: 2;
+}
+
+.logo-container img {
+height: 60px;
+}
+
 .hero-content {
 position: relative;
 z-index: 2;
@@ -68,23 +75,7 @@ text-align: center;
 padding: 0 20px;
 }
 
-.logo-inline {
-position: absolute;
-top: 20px;
-width: 100px; /* Größe des Logos */
-height: auto;
-z-index: 3;
-}
-
-.logo-left {
-left: 20px;
-}
-
-.logo-right {
-right: 20px;
-}
-
-.logo-text {
+.hero-title {
 font-size: 3rem;
 font-weight: bold;
 margin-bottom: 10px;
@@ -111,7 +102,6 @@ transition: background 0.3s ease;
 background-color: #ff9900;
 }
 
-/* Features-Bereich */
 .features {
 display: flex;
 flex-wrap: wrap;
@@ -145,19 +135,6 @@ color: orange;
 margin-bottom: 10px;
 }
 
-/* Sponsoren-Bereich */
-.sponsor-section {
-background-color: #0d0d0d;
-padding: 40px 20px;
-text-align: center;
-}
-
-.sponsor-section img {
-max-width: 150px;
-margin: 10px;
-}
-
-/* Footer */
 footer {
 background-color: #1a1a1a;
 text-align: center;
@@ -172,10 +149,12 @@ font-size: 0.9rem;
 <header>
 <div class="overlay"></div>
 
-<!-- Logos oben links & rechts -->
-<img class="logo-inline logo-left" src="data:image/png;base64,BASE64_LOGO_HERE" alt="MetoSports Logo">
-<img class="logo-inline logo-right" src="data:image/png;base64,BASE64_LOGO_HERE" alt="MetoSports Logo">
+<!-- Logo oben links -->
+<div class="logo-container">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD... (DEIN GANZER BASE64 STRING HIER)" alt="MetoSports Logo">
+</div>
 
+<!-- Navigation -->
 <nav>
 <a href="#">Talente</a>
 <a href="#">Manager</a>
@@ -183,8 +162,9 @@ font-size: 0.9rem;
 <a href="#">Registrieren</a>
 </nav>
 
+<!-- Hero-Inhalt -->
 <div class="hero-content">
-<div class="logo-text">MetoSports</div>
+<div class="hero-title">MetoSports</div>
 <div class="slogan">Deine Bühne im Sport – Zeig dein Talent</div>
 <a href="#features" class="cta-button">Jetzt registrieren</a>
 </div>
@@ -213,6 +193,11 @@ font-size: 0.9rem;
 </div>
 </section>
 
-<section class="sponsor-section">
-<p>Unsere Partner:</p>
-<img src="https://upload.wikimedia.org/w
+<footer>
+<p>© 2025 MetoSports</p>
+<p><a href="#" style="color: orange;">Impressum</a> | <a href="#" style="color: orange;">Datenschutz</a></p>
+<p>kontakt@meto-sports.com</p>
+</footer>
+
+</body>
+</html>
