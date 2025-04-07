@@ -1,128 +1,59 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>MetoSports – Deine Bühne im Sport</title>
-<style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-body {
-font-family: 'Segoe UI', sans-serif;
-background: url('fussball_basketball.jpg') center/cover no-repeat fixed;
-color: white;
-min-height: 100vh;
-}
-
-header {
-background-color: rgba(0, 0, 0, 0.7);
-padding: 20px 40px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-header img {
-height: 40px;
-}
-
-nav ul {
-list-style: none;
-display: flex;
-gap: 20px;
-}
-
-nav ul li a {
-color: white;
-text-decoration: none;
-font-weight: bold;
-}
-
-.hero {
-text-align: center;
-padding: 150px 20px 80px;
-background-color: rgba(0, 0, 0, 0.5);
-}
-
-.hero h1 {
-font-size: 36px;
-margin-bottom: 20px;
-}
-
-.hero p {
-font-size: 18px;
-margin-bottom: 30px;
-}
-
-.hero a {
-padding: 12px 28px;
-background-color: white;
-color: black;
-font-weight: bold;
-text-decoration: none;
-border-radius: 6px;
-}
-
-.features {
-padding: 60px 30px;
-background-color: rgba(0, 0, 0, 0.8);
-text-align: center;
-}
-
-.features h2 {
-font-size: 24px;
-margin-bottom: 30px;
-}
-
-.footer {
-padding: 20px;
-background-color: rgba(0, 0, 0, 0.9);
-text-align: center;
-font-size: 13px;
-}
-
-.footer a {
-color: #ccc;
-margin: 0 10px;
-text-decoration: none;
-}
-
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MetoSports</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-<img src="logo_metosports_white.png" alt="MetoSports Logo">
-<nav>
-<ul>
-<li><a href="#">Talent</a></li>
+<header class="hero">
+<nav class="navbar">
+<div class="logo">MetoSports</div>
+<ul class="nav-links">
+<li><a href="#">Talente</a></li>
 <li><a href="#">Manager</a></li>
 <li><a href="#">Scouting</a></li>
-<li><a href="#">Statistik</a></li>
-<li><a href="#">Registrieren</a></li>
+<li><a href="#" class="register-button">Registrieren</a></li>
 </ul>
 </nav>
+<div class="hero-content">
+<h1>Deine Bühne im Sport</h1>
+<p>Zeig dein Talent</p>
+<a href="#" class="cta">Jetzt registrieren</a>
+</div>
 </header>
 
-<section class="hero">
-<h1>Deine Bühne im Sport – Zeig dein Talent</h1>
-<p>Verbinde dich mit Scouts, Managern und Vereinen weltweit. Werde gesehen. Werde entdeckt.</p>
-<a href="register.html">Jetzt kostenlos registrieren</a>
+<section class="features">
+<div class="feature-box">
+<img src="img/profil-icon.png" alt="Profil erstellen">
+<h3>Profil erstellen</h3>
+<p>Lege dein Profil an und präsentiere dich Vereinen und Scouts.</p>
+</div>
+<div class="feature-box">
+<img src="img/video-icon.png" alt="Video hochladen">
+<h3>Video hochladen</h3>
+<p>Lade deine Spiel- oder Trainingsvideos hoch.</p>
+</div>
+<div class="feature-box">
+<img src="img/statistik-icon.png" alt="Statistiken verfolgen">
+<h3>Statistiken verfolgen</h3>
+<p>Behalte den Überblick über deine Leistungen.</p>
+</div>
+<div class="feature-box">
+<img src="img/star-icon.png" alt="Erfolgsgeschichten">
+<h3>Erfolgsgeschichten</h3>
+<p>Lies inspirierende Geschichten unserer Talente.</p>
+</div>
 </section>
 
-<section class="features">
-<h2>Was wir bieten</h2>
-<p>Video-Upload, persönliche Statistiken, Scouting-System, Nachrichtenfunktion und mehr – für alle Sportarten, in mehreren Sprachen.</p>
+<section class="sponsors">
+<p>SPONSOR &nbsp;&nbsp;&nbsp; SPONSOR &nbsp;&nbsp;&nbsp; SPONSOR &nbsp;&nbsp;&nbsp; SPONSOR</p>
 </section>
 
 <footer class="footer">
-<a href="#">Impressum</a> |
-<a href="#">Datenschutz</a> |
-<a href="#">Kontakt</a>
+<a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">Kontakt</a>
 </footer>
 
 </body>
