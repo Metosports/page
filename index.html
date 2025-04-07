@@ -4,30 +4,171 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>MetoSports</title>
-<link rel="stylesheet" href="style.css" />
+<style>
+body {
+margin: 0;
+font-family: 'Arial', sans-serif;
+background-color: #0d0d0d;
+color: #ffffff;
+line-height: 1.6;
+}
+
+a {
+color: orange;
+text-decoration: none;
+margin: 0 10px;
+}
+
+header.hero {
+height: 100vh;
+background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 0 20px;
+}
+
+.hero-content {
+max-width: 600px;
+}
+
+.logo {
+font-size: 3rem;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+.slogan {
+font-size: 1.5rem;
+margin: 20px 0;
+}
+
+.cta-button {
+display: inline-block;
+padding: 12px 24px;
+background-color: orange;
+color: black;
+font-weight: bold;
+border-radius: 8px;
+transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+background-color: #ff9900;
+}
+
+section {
+padding: 60px 20px;
+max-width: 800px;
+margin: auto;
+text-align: center;
+}
+
+ul {
+list-style: none;
+padding: 0;
+}
+
+ul li {
+margin: 10px 0;
+font-size: 1.2rem;
+}
+
+.newsletter form {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+}
+
+.newsletter input[type="email"] {
+padding: 10px;
+width: 250px;
+border-radius: 5px;
+border: none;
+}
+
+.newsletter button {
+padding: 10px 20px;
+background-color: orange;
+color: black;
+font-weight: bold;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.footer {
+text-align: center;
+padding: 40px 20px;
+background-color: #1a1a1a;
+font-size: 0.9rem;
+color: #bbb;
+}
+
+.fade-in {
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+nav {
+background: #1a1a1a;
+padding: 10px;
+text-align: center;
+}
+
+select {
+margin-top: 10px;
+background-color: #333;
+color: white;
+border: none;
+padding: 5px;
+border-radius: 5px;
+}
+
+.video-section video {
+max-width: 100%;
+border-radius: 10px;
+}
+
+.video-section img {
+width: 100%;
+max-width: 600px;
+border-radius: 10px;
+margin-top: 20px;
+}
+</style>
 </head>
 <body>
-<header class="hero">
-<div class="hero-content">
-<h1 class="logo" id="slogan">MetoSports</h1>
-<p class="slogan">Deine Bühne im Sport – Zeig dein Talent</p>
-<a href="#newsletter" class="cta-button">Jetzt vormerken</a>
-</div>
-</header>
 
-<nav class="main-nav">
-<a href="index.html" id="navStart">Start</a>
-<a href="manager.html" id="navManager">Manager</a>
-<a href="#" id="navTalent">Vereine</a>
-<a href="#" id="navScouting">Scouts</a>
-<a href="#" id="navFans">Fans</a>
-
+<nav>
+<a href="#">Start</a>
+<a href="manager.html">Manager</a>
+<a href="#">Vereine</a>
+<a href="#">Scouts</a>
+<a href="#">Fans</a>
 <select id="languageSwitcher">
 <option value="de">Deutsch</option>
 <option value="en">English</option>
+<option value="es">Español</option>
 <option value="fr">Français</option>
 </select>
 </nav>
+
+<header class="hero fade-in">
+<div class="hero-content">
+<h1 class="logo" id="slogan">MetoSports</h1>
+<p class="slogan" id="sloganText">Deine Bühne im Sport – Zeig dein Talent</p>
+<a href="#newsletter" class="cta-button">Jetzt vormerken</a>
+</div>
+</header>
 
 <section class="intro fade-in">
 <h2>Was ist MetoSports?</h2>
@@ -54,6 +195,15 @@
 </ul>
 </section>
 
+<section class="video-section fade-in">
+<h2>Beispielvideo</h2>
+<video controls>
+<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+Dein Browser unterstützt kein HTML5-Video.
+</video>
+<img src="https://via.placeholder.com/600x300?text=MetoSports+Bild" alt="Beispielbild"/>
+</section>
+
 <section class="security fade-in">
 <h2>Vertrauen & Sicherheit</h2>
 <p>Deine Daten sind sicher. Deine Leistung gehört dir.</p>
@@ -73,44 +223,22 @@
 <p>kontakt@meto-sports.com</p>
 </footer>
 
-<!-- Sprachumschalter Script -->
 <script>
+// Sprachumschalter (nur Beispiel für Slogan)
 const translations = {
-de: {
-slogan: "MetoSports",
-navStart: "Start",
-navManager: "Manager",
-navTalent: "Vereine",
-navScouting: "Scouts",
-navFans: "Fans"
-},
-en: {
-slogan: "MetoSports",
-navStart: "Home",
-navManager: "Manager",
-navTalent: "Clubs",
-navScouting: "Scouts",
-navFans: "Fans"
-},
-fr: {
-slogan: "MetoSports",
-navStart: "Accueil",
-navManager: "Manager",
-navTalent: "Clubs",
-navScouting: "Recruteurs",
-navFans: "Fans"
-}
+de: { sloganText: "Deine Bühne im Sport – Zeig dein Talent" },
+en: { sloganText: "Your stage in sports – Show your talent" },
+es: { sloganText: "Tu escenario en el deporte – Muestra tu talento" },
+fr: { sloganText: "Ta scène dans le sport – Montre ton talent" }
 };
 
-const elements = ["slogan", "navStart", "navManager", "navTalent", "navScouting", "navFans"];
 const switcher = document.getElementById("languageSwitcher");
 
 function updateLanguage(lang) {
 const t = translations[lang];
-elements.forEach(id => {
-const el = document.getElementById(id);
-if (el) el.textContent = t[id];
-});
+if (t && document.getElementById("sloganText")) {
+document.getElementById("sloganText").textContent = t.sloganText;
+}
 localStorage.setItem("lang", lang);
 }
 
@@ -121,10 +249,8 @@ updateLanguage(switcher.value);
 const savedLang = localStorage.getItem("lang") || "de";
 switcher.value = savedLang;
 updateLanguage(savedLang);
-</script>
 
-<!-- Animation Script -->
-<script>
+// Fade-in Animation
 const observer = new IntersectionObserver(entries => {
 entries.forEach(entry => {
 if (entry.isIntersecting) {
@@ -137,5 +263,6 @@ document.querySelectorAll(".fade-in").forEach(el => {
 observer.observe(el);
 });
 </script>
+
 </body>
 </html>
