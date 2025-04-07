@@ -15,85 +15,67 @@ body {
 font-family: Arial, sans-serif;
 background-color: #000;
 color: #fff;
-line-height: 1.6;
 }
 
 header {
 position: relative;
 height: 100vh;
-background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+background: url('https://images.unsplash.com/photo-1606851092774-399b1e231b6a?crop=entropy&cs=tinysrgb&fit=crop&h=1000&q=80&w=1600') no-repeat center center/cover;
 }
 
 .overlay {
 position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: rgba(0, 0, 0, 0.6);
+inset: 0;
+background-color: rgba(0, 0, 0, 0.6);
 }
 
 nav {
 position: absolute;
 top: 20px;
-left: 50%;
-transform: translateX(-50%);
-display: flex;
-gap: 30px;
-z-index: 2;
-}
-
-nav a {
-color: white;
-text-decoration: none;
-font-weight: bold;
-font-size: 1rem;
-transition: color 0.3s ease;
-}
-
-nav a:hover {
-color: orange;
-}
-
-.logo-container {
-position: absolute;
-top: 20px;
 left: 20px;
-z-index: 2;
+display: flex;
+align-items: center;
+z-index: 10;
 }
 
-.logo-container img {
+nav img.logo {
 height: 60px;
+margin-right: 15px;
+}
+
+nav .site-name {
+font-size: 1.8rem;
+font-weight: bold;
+color: #fff;
 }
 
 .hero-content {
-position: relative;
-z-index: 2;
+position: absolute;
 top: 50%;
-transform: translateY(-50%);
+left: 50%;
+transform: translate(-50%, -50%);
 text-align: center;
-padding: 0 20px;
+z-index: 10;
 }
 
-.hero-title {
+.hero-content h1 {
 font-size: 3rem;
-font-weight: bold;
-margin-bottom: 10px;
+margin-bottom: 20px;
 }
 
-.slogan {
+.hero-content p {
 font-size: 1.5rem;
 margin-bottom: 30px;
 }
 
 .cta-button {
-background-color: orange;
-color: black;
-padding: 12px 24px;
+padding: 14px 28px;
+font-size: 1rem;
 font-weight: bold;
+background-color: orange;
+color: #000;
 border: none;
 border-radius: 6px;
-font-size: 1rem;
 text-decoration: none;
 transition: background 0.3s ease;
 }
@@ -101,103 +83,23 @@ transition: background 0.3s ease;
 .cta-button:hover {
 background-color: #ff9900;
 }
-
-.features {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-padding: 60px 20px;
-gap: 30px;
-background-color: #111;
-}
-
-.feature-box {
-background: #1a1a1a;
-padding: 30px;
-border-radius: 10px;
-text-align: center;
-flex: 1 1 200px;
-max-width: 250px;
-transition: transform 0.3s ease;
-}
-
-.feature-box:hover {
-transform: translateY(-5px);
-}
-
-.feature-box img {
-width: 50px;
-margin-bottom: 15px;
-}
-
-.feature-box h3 {
-color: orange;
-margin-bottom: 10px;
-}
-
-footer {
-background-color: #1a1a1a;
-text-align: center;
-color: #bbb;
-padding: 30px 20px;
-font-size: 0.9rem;
-}
 </style>
 </head>
 <body>
 
 <header>
 <div class="overlay"></div>
-
-<!-- Logo oben links -->
-<div class="logo-container">
-<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD... (DEIN GANZER BASE64 STRING HIER)" alt="MetoSports Logo">
-</div>
-
-<!-- Navigation -->
 <nav>
-<a href="#">Talente</a>
-<a href="#">Manager</a>
-<a href="#">Scouting</a>
-<a href="#">Registrieren</a>
+<!-- Logo mit Base64 oder Bild-URL -->
+<img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAABV7bNHAAA..." alt="MetoSports Logo" />
+<div class="site-name">MetoSports</div>
 </nav>
-
-<!-- Hero-Inhalt -->
 <div class="hero-content">
-<div class="hero-title">MetoSports</div>
-<div class="slogan">Deine Bühne im Sport – Zeig dein Talent</div>
+<h1>Deine Bühne im Sport</h1>
+<p>Zeig dein Talent – Fußball, Basketball, uvm.</p>
 <a href="#features" class="cta-button">Jetzt registrieren</a>
 </div>
 </header>
-
-<section class="features" id="features">
-<div class="feature-box">
-<img src="https://img.icons8.com/ios-filled/50/upload.png" alt="Upload">
-<h3>Video-Upload</h3>
-<p>Lade deine besten Szenen hoch und werde entdeckt.</p>
-</div>
-<div class="feature-box">
-<img src="https://img.icons8.com/ios-filled/50/combo-chart.png" alt="Stats">
-<h3>Marktwerte</h3>
-<p>Verfolge deine Statistiken & deinen Marktwert.</p>
-</div>
-<div class="feature-box">
-<img src="https://img.icons8.com/ios-filled/50/search.png" alt="Scouting">
-<h3>Scouting</h3>
-<p>Vereine & Scouts finden gezielt Talente.</p>
-</div>
-<div class="feature-box">
-<img src="https://img.icons8.com/ios-filled/50/basketball.png" alt="Sportarten">
-<h3>Multisport</h3>
-<p>Unterstützt Fußball, Basketball, Tennis u.v.m.</p>
-</div>
-</section>
-
-<footer>
-<p>© 2025 MetoSports</p>
-<p><a href="#" style="color: orange;">Impressum</a> | <a href="#" style="color: orange;">Datenschutz</a></p>
-<p>kontakt@meto-sports.com</p>
-</footer>
 
 </body>
 </html>
