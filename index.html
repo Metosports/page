@@ -2,267 +2,128 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>MetoSports</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MetoSports – Deine Bühne im Sport</title>
 <style>
-body {
+* {
 margin: 0;
-font-family: 'Arial', sans-serif;
-background-color: #0d0d0d;
-color: #ffffff;
-line-height: 1.6;
-}
-
-a {
-color: orange;
-text-decoration: none;
-margin: 0 10px;
-}
-
-header.hero {
-height: 100vh;
-background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-padding: 0 20px;
-}
-
-.hero-content {
-max-width: 600px;
-}
-
-.logo {
-font-size: 3rem;
-font-weight: bold;
-letter-spacing: 1px;
-}
-
-.slogan {
-font-size: 1.5rem;
-margin: 20px 0;
-}
-
-.cta-button {
-display: inline-block;
-padding: 12px 24px;
-background-color: orange;
-color: black;
-font-weight: bold;
-border-radius: 8px;
-transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-background-color: #ff9900;
-}
-
-section {
-padding: 60px 20px;
-max-width: 800px;
-margin: auto;
-text-align: center;
-}
-
-ul {
-list-style: none;
 padding: 0;
+box-sizing: border-box;
 }
 
-ul li {
-margin: 10px 0;
-font-size: 1.2rem;
+body {
+font-family: 'Segoe UI', sans-serif;
+background: url('fussball_basketball.jpg') center/cover no-repeat fixed;
+color: white;
+min-height: 100vh;
 }
 
-.newsletter form {
+header {
+background-color: rgba(0, 0, 0, 0.7);
+padding: 20px 40px;
 display: flex;
-flex-direction: column;
+justify-content: space-between;
 align-items: center;
-gap: 10px;
 }
 
-.newsletter input[type="email"] {
-padding: 10px;
-width: 250px;
-border-radius: 5px;
-border: none;
+header img {
+height: 40px;
 }
 
-.newsletter button {
-padding: 10px 20px;
-background-color: orange;
+nav ul {
+list-style: none;
+display: flex;
+gap: 20px;
+}
+
+nav ul li a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+
+.hero {
+text-align: center;
+padding: 150px 20px 80px;
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+font-size: 36px;
+margin-bottom: 20px;
+}
+
+.hero p {
+font-size: 18px;
+margin-bottom: 30px;
+}
+
+.hero a {
+padding: 12px 28px;
+background-color: white;
 color: black;
 font-weight: bold;
-border: none;
-border-radius: 5px;
-cursor: pointer;
+text-decoration: none;
+border-radius: 6px;
+}
+
+.features {
+padding: 60px 30px;
+background-color: rgba(0, 0, 0, 0.8);
+text-align: center;
+}
+
+.features h2 {
+font-size: 24px;
+margin-bottom: 30px;
 }
 
 .footer {
+padding: 20px;
+background-color: rgba(0, 0, 0, 0.9);
 text-align: center;
-padding: 40px 20px;
-background-color: #1a1a1a;
-font-size: 0.9rem;
-color: #bbb;
+font-size: 13px;
 }
 
-.fade-in {
-opacity: 0;
-transform: translateY(20px);
-transition: opacity 1s ease, transform 1s ease;
+.footer a {
+color: #ccc;
+margin: 0 10px;
+text-decoration: none;
 }
 
-.fade-in.visible {
-opacity: 1;
-transform: translateY(0);
-}
-
-nav {
-background: #1a1a1a;
-padding: 10px;
-text-align: center;
-}
-
-select {
-margin-top: 10px;
-background-color: #333;
-color: white;
-border: none;
-padding: 5px;
-border-radius: 5px;
-}
-
-.video-section video {
-max-width: 100%;
-border-radius: 10px;
-}
-
-.video-section img {
-width: 100%;
-max-width: 600px;
-border-radius: 10px;
-margin-top: 20px;
-}
 </style>
 </head>
 <body>
 
+<header>
+<img src="logo_metosports_white.png" alt="MetoSports Logo">
 <nav>
-<a href="#">Start</a>
-<a href="manager.html">Manager</a>
-<a href="#">Vereine</a>
-<a href="#">Scouts</a>
-<a href="#">Fans</a>
-<select id="languageSwitcher">
-<option value="de">Deutsch</option>
-<option value="en">English</option>
-<option value="es">Español</option>
-<option value="fr">Français</option>
-</select>
+<ul>
+<li><a href="#">Talent</a></li>
+<li><a href="#">Manager</a></li>
+<li><a href="#">Scouting</a></li>
+<li><a href="#">Statistik</a></li>
+<li><a href="#">Registrieren</a></li>
+</ul>
 </nav>
-
-<header class="hero fade-in">
-<div class="hero-content">
-<h1 class="logo" id="slogan">MetoSports</h1>
-<p class="slogan" id="sloganText">Deine Bühne im Sport – Zeig dein Talent</p>
-<a href="#newsletter" class="cta-button">Jetzt vormerken</a>
-</div>
 </header>
 
-<section class="intro fade-in">
-<h2>Was ist MetoSports?</h2>
-<p>MetoSports ist die Plattform für Sporttalente. Lade deine Highlights hoch, analysiere deine Leistung – und werde entdeckt.</p>
+<section class="hero">
+<h1>Deine Bühne im Sport – Zeig dein Talent</h1>
+<p>Verbinde dich mit Scouts, Managern und Vereinen weltweit. Werde gesehen. Werde entdeckt.</p>
+<a href="register.html">Jetzt kostenlos registrieren</a>
 </section>
 
-<section class="audience fade-in">
-<h2>Für wen ist MetoSports?</h2>
-<ul>
-<li>Talente</li>
-<li>Vereine</li>
-<li>Scouts</li>
-<li>Fans</li>
-</ul>
-</section>
-
-<section class="features fade-in">
-<h2>Funktionen</h2>
-<ul>
-<li>Video-Upload</li>
-<li>Statistiken & Marktwerte</li>
-<li>Scouting-Zugang</li>
-<li>Multisport-Unterstützung</li>
-</ul>
-</section>
-
-<section class="video-section fade-in">
-<h2>Beispielvideo</h2>
-<video controls>
-<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-Dein Browser unterstützt kein HTML5-Video.
-</video>
-<img src="https://via.placeholder.com/600x300?text=MetoSports+Bild" alt="Beispielbild"/>
-</section>
-
-<section class="security fade-in">
-<h2>Vertrauen & Sicherheit</h2>
-<p>Deine Daten sind sicher. Deine Leistung gehört dir.</p>
-</section>
-
-<section class="newsletter fade-in" id="newsletter">
-<h2>Bleib informiert</h2>
-<form>
-<input type="email" placeholder="Deine E-Mail-Adresse" required />
-<button type="submit">Jetzt vormerken</button>
-</form>
+<section class="features">
+<h2>Was wir bieten</h2>
+<p>Video-Upload, persönliche Statistiken, Scouting-System, Nachrichtenfunktion und mehr – für alle Sportarten, in mehreren Sprachen.</p>
 </section>
 
 <footer class="footer">
-<p>© 2025 MetoSports</p>
-<p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
-<p>kontakt@meto-sports.com</p>
+<a href="#">Impressum</a> |
+<a href="#">Datenschutz</a> |
+<a href="#">Kontakt</a>
 </footer>
-
-<script>
-// Sprachumschalter (nur Beispiel für Slogan)
-const translations = {
-de: { sloganText: "Deine Bühne im Sport – Zeig dein Talent" },
-en: { sloganText: "Your stage in sports – Show your talent" },
-es: { sloganText: "Tu escenario en el deporte – Muestra tu talento" },
-fr: { sloganText: "Ta scène dans le sport – Montre ton talent" }
-};
-
-const switcher = document.getElementById("languageSwitcher");
-
-function updateLanguage(lang) {
-const t = translations[lang];
-if (t && document.getElementById("sloganText")) {
-document.getElementById("sloganText").textContent = t.sloganText;
-}
-localStorage.setItem("lang", lang);
-}
-
-switcher.addEventListener("change", () => {
-updateLanguage(switcher.value);
-});
-
-const savedLang = localStorage.getItem("lang") || "de";
-switcher.value = savedLang;
-updateLanguage(savedLang);
-
-// Fade-in Animation
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-entry.target.classList.add("visible");
-}
-});
-});
-
-document.querySelectorAll(".fade-in").forEach(el => {
-observer.observe(el);
-});
-</script>
 
 </body>
 </html>
