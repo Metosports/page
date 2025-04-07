@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Manager Dashboard – MetoSports</title>
+<style>
+body {
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+background-color: #000;
+color: #fff;
+}
+
+header {
+background-color: #111;
+padding: 20px 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-size: 20px;
+font-weight: bold;
+}
+
+nav {
+display: flex;
+gap: 20px;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+font-size: 15px;
+}
+
+.dashboard {
+max-width: 1200px;
+margin: 40px auto;
+padding: 20px;
+}
+
+.welcome {
+font-size: 24px;
+margin-bottom: 30px;
+}
+
+.widgets {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+}
+
+.widget {
+background-color: #1a1a1a;
+padding: 20px;
+border-radius: 10px;
+flex: 1 1 280px;
+min-height: 160px;
+box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+.widget h3 {
+margin-bottom: 10px;
+font-size: 18px;
+}
+
+.widget p {
+font-size: 14px;
+color: #ccc;
+}
+
+.widget button {
+margin-top: 10px;
+padding: 8px 16px;
+background-color: #fff;
+color: #000;
+border: none;
+border-radius: 5px;
+font-weight: bold;
+cursor: pointer;
+}
+
+footer {
+background-color: #111;
+padding: 20px;
+text-align: center;
+font-size: 14px;
+color: #aaa;
+margin-top: 40px;
+}
+
+footer a {
+color: #aaa;
+margin: 0 10px;
+text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">MetoSports</div>
+<nav>
+<a href="index.html">Startseite</a>
+<a href="nachrichten.html">Nachrichten</a>
+<a href="scouting.html">Scouting</a>
+<a href="logout.html">Logout</a>
+</nav>
+</header>
+
+<section class="dashboard">
+<div class="welcome">Willkommen im Manager-Dashboard</div>
+
+<div class="widgets">
+<div class="widget">
+<h3>Neue Talente</h3>
+<p>4 neue Profile mit Videos verfügbar.</p>
+<button>Jetzt ansehen</button>
+</div>
+
+<div class="widget">
+<h3>Nachrichten</h3>
+<p>3 ungelesene Anfragen von Spielern.</p>
+<button>Posteingang öffnen</button>
+</div>
+
+<div class="widget">
+<h3>Favoriten</h3>
+<p>Du hast 7 Spieler in deiner Merkliste.</p>
+<button>Merkliste anzeigen</button>
+</div>
+
+<div class="widget">
+<h3>Filter & Suche</h3>
+<p>Suche nach Sportart, Region oder Alter.</p>
+<button>Filter öffnen</button>
+</div>
+</div>
+</section>
+
+<footer>
+<a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">Kontakt</a>
+<div>&copy; 2025 MetoSports</div>
+</footer>
+
+</body>
+</html>
