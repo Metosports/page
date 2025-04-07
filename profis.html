@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profis – MetoSports</title>
+<style>
+body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #000; color: #fff; }
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #111;
+padding: 20px 40px;
+}
+.logo { font-size: 20px; font-weight: bold; }
+nav { display: flex; gap: 20px; justify-content: center; flex: 1; }
+nav a {
+color: #fff;
+text-decoration: none;
+font-size: 16px;
+}
+.register-button {
+padding: 10px 20px;
+background-color: #fff;
+color: #000;
+border: none;
+border-radius: 5px;
+font-weight: bold;
+cursor: pointer;
+}
+.hero {
+background: url('https://images.unsplash.com/photo-1571003123894-1bfa2b6cb5e2?auto=format&fit=crop&w=1950&q=80') center center/cover no-repeat;
+padding: 140px 20px 100px;
+text-align: center;
+position: relative;
+}
+.hero::before {
+content: "";
+position: absolute;
+top: 0; left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.6);
+}
+.hero-content {
+position: relative;
+z-index: 1;
+}
+.hero h1 {
+font-size: 40px;
+margin: 0;
+}
+.hero p {
+font-size: 20px;
+color: #ccc;
+margin-top: 10px;
+}
+.section {
+padding: 60px 20px;
+text-align: center;
+background-color: #111;
+}
+.section h2 {
+font-size: 28px;
+margin-bottom: 20px;
+}
+.section p {
+max-width: 700px;
+margin: 0 auto;
+font-size: 16px;
+color: #ccc;
+}
+.cta {
+text-align: center;
+padding: 40px;
+}
+.cta button {
+background-color: #fff;
+color: #000;
+padding: 15px 30px;
+border: none;
+font-weight: bold;
+font-size: 18px;
+border-radius: 5px;
+cursor: pointer;
+}
+footer {
+background-color: #111;
+padding: 20px;
+text-align: center;
+font-size: 14px;
+color: #aaa;
+}
+footer a {
+color: #aaa;
+text-decoration: none;
+margin: 0 10px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">MetoSports</div>
+<nav>
+<a href="index.html">Startseite</a>
+<a href="talente.html">Talente</a>
+<a href="#">Manager</a>
+<a href="#">Scouting</a>
+<a href="#">Statistik</a>
+</nav>
+<button class="register-button">Registrieren</button>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Profis im Fokus</h1>
+<p>Nutze MetoSports zur Selbstvermarktung und Präsentation deiner Karriere.</p>
+</div>
+</section>
+
+<section class="section">
+<h2>Deine digitale Visitenkarte</h2>
+<p>
+Als Profi hast du auf MetoSports die Möglichkeit, deine Laufbahn professionell zu präsentieren.
+Mit aktuellen Daten, Highlight-Videos und Statistiken bleibst du für Vereine, Manager und Sponsoren sichtbar.
+</p>
+</section>
+
+<section class="section">
+<h2>Netzwerke aufbauen und Chancen nutzen</h2>
+<p>
+Nutze die Plattform, um mit Scouts, Managern und Agenturen in Kontakt zu treten – egal ob du auf dem Höhepunkt deiner Karriere bist oder dich neu orientieren möchtest.
+</p>
+</section>
+
+<section class="cta">
+<button>Jetzt als Profi registrieren</button>
+</section>
+
+<footer>
+<a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">Kontakt</a>
+<div>&copy; 2025 MetoSports</div>
+</footer>
+
+</body>
+</html>
