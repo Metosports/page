@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MetoSports</title>
 <style>
 * {
@@ -19,179 +19,201 @@ line-height: 1.6;
 }
 
 header {
-background: url('HINTERGRUNDBILD.jpg') center/cover no-repeat;
-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-padding: 20px;
 position: relative;
+height: 100vh;
+background: url('https://images.unsplash.com/photo-1593341646782-22d6d0fbeb72?fit=crop&w=1600&q=80') no-repeat center center/cover;
 }
 
-.top-bar {
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.6);
+}
+
+.logo-top-left {
+position: absolute;
+top: 20px;
+left: 20px;
+z-index: 10;
+}
+
+.logo-top-left img {
+height: 60px;
+width: auto;
+}
+
+nav {
+position: absolute;
+top: 20px;
+right: 30px;
 display: flex;
-justify-content: space-between;
-align-items: center;
+gap: 30px;
+z-index: 2;
 }
 
-.logo {
-display: flex;
-align-items: center;
-}
-
-.logo img {
-height: 40px;
-margin-right: 10px;
-}
-
-.nav {
-display: flex;
-gap: 20px;
-}
-
-.nav a {
+nav a {
 color: white;
 text-decoration: none;
 font-weight: bold;
+font-size: 1rem;
 transition: color 0.3s ease;
 }
 
-.nav a:hover {
+nav a:hover {
 color: orange;
 }
 
-.hero-text {
+.hero-content {
+position: relative;
+z-index: 2;
+top: 50%;
+transform: translateY(-50%);
 text-align: center;
 padding: 0 20px;
 }
 
-.hero-text h1 {
+.hero-content h1 {
 font-size: 3rem;
 font-weight: bold;
+margin-bottom: 10px;
 }
 
-.hero-text p {
+.slogan {
 font-size: 1.5rem;
-margin: 15px 0;
+margin-bottom: 30px;
 }
 
-.hero-text .cta-button {
-padding: 12px 24px;
-background-color: white;
+.cta-button {
+background-color: orange;
 color: black;
+padding: 12px 24px;
 font-weight: bold;
 border: none;
-border-radius: 5px;
-cursor: pointer;
+border-radius: 6px;
+font-size: 1rem;
 text-decoration: none;
 transition: background 0.3s ease;
 }
 
-.hero-text .cta-button:hover {
-background-color: orange;
-color: black;
+.cta-button:hover {
+background-color: #ff9900;
 }
 
 .features {
 display: flex;
-justify-content: center;
 flex-wrap: wrap;
+justify-content: center;
+padding: 60px 20px;
+gap: 30px;
 background-color: #111;
-padding: 50px 20px;
-gap: 20px;
-text-align: center;
 }
 
 .feature-box {
-flex: 1 1 200px;
-background-color: #1a1a1a;
-padding: 20px;
+background: #1a1a1a;
+padding: 30px;
 border-radius: 10px;
+text-align: center;
+flex: 1 1 200px;
+max-width: 250px;
+transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+transform: translateY(-5px);
+}
+
+.feature-box img {
+width: 50px;
+margin-bottom: 15px;
 }
 
 .feature-box h3 {
-color: white;
+color: orange;
 margin-bottom: 10px;
 }
 
-.feature-box p {
-color: #ccc;
+.sponsor-section {
+background-color: #0d0d0d;
+padding: 40px 20px;
+text-align: center;
 }
 
-.sponsors {
-background-color: #000;
-color: #fff;
-text-align: center;
-padding: 30px 10px;
+.sponsor-section img {
+max-width: 150px;
+margin: 10px;
 }
 
-.footer {
-background-color: #111;
-color: #999;
+footer {
+background-color: #1a1a1a;
 text-align: center;
-padding: 20px;
+color: #bbb;
+padding: 30px 20px;
 font-size: 0.9rem;
-}
-
-.footer a {
-color: #999;
-margin: 0 10px;
-text-decoration: none;
-}
-
-.footer a:hover {
-color: white;
 }
 </style>
 </head>
 <body>
 
 <header>
-<div class="top-bar">
-<div class="logo">
-<img src="DEIN_LOGO.png" alt="MetoSports Logo" />
-<span style="font-size: 1.2rem; font-weight: bold;">MetoSports</span>
+<div class="overlay"></div>
+
+<!-- Logo oben links -->
+<div class="logo-top-left">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/44/MetoSports_Logo_Mock.png" alt="MetoSports Logo">
 </div>
-<nav class="nav">
+
+<!-- Navigation -->
+<nav>
 <a href="#">Talente</a>
 <a href="#">Manager</a>
 <a href="#">Scouting</a>
 <a href="#">Registrieren</a>
 </nav>
-</div>
-<div class="hero-text">
-<h1>Deine Bühne im Sport</h1>
-<p>Zeig dein Talent</p>
-<a href="#" class="cta-button">Jetzt registrieren</a>
+
+<!-- Hero-Bereich -->
+<div class="hero-content">
+<h1>MetoSports</h1>
+<div class="slogan">Deine Bühne im Sport – Zeig dein Talent</div>
+<a href="#features" class="cta-button">Jetzt registrieren</a>
 </div>
 </header>
 
-<section class="features">
+<section class="features" id="features">
 <div class="feature-box">
-<h3>Profil erstellen</h3>
-<p>Lege dein Profil an und präsentier dich.</p>
+<img src="https://img.icons8.com/ios-filled/50/upload.png" alt="Upload">
+<h3>Video-Upload</h3>
+<p>Lade deine besten Szenen hoch und werde entdeckt.</p>
 </div>
 <div class="feature-box">
-<h3>Video hochladen</h3>
-<p>Lade Spiel- oder Trainingsvideos hoch.</p>
+<img src="https://img.icons8.com/ios-filled/50/combo-chart.png" alt="Stats">
+<h3>Marktwerte</h3>
+<p>Verfolge deine Statistiken & deinen Marktwert.</p>
 </div>
 <div class="feature-box">
-<h3>Statistiken verfolgen</h3>
-<p>Behalte deine Leistung im Blick.</p>
+<img src="https://img.icons8.com/ios-filled/50/search.png" alt="Scouting">
+<h3>Scouting</h3>
+<p>Vereine & Scouts finden gezielt Talente.</p>
 </div>
 <div class="feature-box">
-<h3>Erfolgsgeschichten</h3>
-<p>Inspiriert von anderen Talenten.</p>
+<img src="https://img.icons8.com/ios-filled/50/basketball.png" alt="Sportarten">
+<h3>Multisport</h3>
+<p>Unterstützt Fußball, Basketball, Tennis u.v.m.</p>
 </div>
 </section>
 
-<section class="sponsors">
-<p>SPONSOR &nbsp;&nbsp; SPONSOR &nbsp;&nbsp; SPONSOR</p>
+<section class="sponsor-section">
+<p>Unsere Partner:</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_Nike.svg" alt="Nike">
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Adidas_Logo.svg" alt="Adidas">
 </section>
 
-<footer class="footer">
-<p><a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">Kontakt</a></p>
+<footer>
 <p>© 2025 MetoSports</p>
+<p><a href="#" style="color: orange;">Impressum</a> | <a href="#" style="color: orange;">Datenschutz</a></p>
+<p>kontakt@meto-sports.com</p>
 </footer>
 
 </body>
