@@ -1,67 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MetoSports</title>
+
+<!-- CSS hier eingebettet -->
 <style>
-.fade-in {
-opacity: 0;
-transform: translateY(20px);
-transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+body {
+margin: 0;
+font-family: 'Arial', sans-serif;
+background-color: #0d0d0d;
+color: #ffffff;
+line-height: 1.6;
 }
 
-.fade-in.visible {
-opacity: 1;
-transform: translateY(0);
+a {
+color: orange;
+text-decoration: none;
+}
+
+.hero {
+height: 100vh;
+background: linear-gradient(to bottom, #0d0d0d, #1a1a1a), url('https://source.unsplash.com/1600x900/?sports') center/cover no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 0 20px;
+}
+
+.hero-content {
+max-width: 600px;
+background-color: rgba(0, 0, 0, 0.6);
+padding: 40px;
+border-radius: 10px;
+}
+
+.logo {
+font-size: 3rem;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+.slogan {
+font-size: 1.5rem;
+margin: 20px 0;
+}
+
+.cta-button {
+display: inline-block;
+padding: 12px 24px;
+background-color: orange;
+color: black;
+font-weight: bold;
+border-radius: 8px;
+transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+background-color: #ff9900;
+}
+
+section {
+padding: 60px 20px;
+max-width: 800px;
+margin: auto;
+text-align: center;
+}
+
+ul {
+list-style: none;
+padding: 0;
+}
+
+ul li {
+margin: 10px 0;
+font-size: 1.2rem;
+}
+
+.newsletter form {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+}
+
+.newsletter input[type="email"] {
+padding: 10px;
+width: 250px;
+border-radius: 5px;
+border: none;
+}
+
+.newsletter button {
+padding: 10px 20px;
+background-color: orange;
+color: black;
+font-weight: bold;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.footer {
+text-align: center;
+padding: 40px 20px;
+background-color: #1a1a1a;
+font-size: 0.9rem;
+color: #bbb;
 }
 </style>
+</head>
+<body>
 
-<section style="background-color: #111; padding: 60px 40px; color: #fff; text-align: center;">
-<h2 style="font-size: 24px; margin-bottom: 20px;" class="fade-in">Was ist MetoSports?</h2>
-<p style="max-width: 800px; margin: 0 auto 40px;" class="fade-in">
-MetoSports ist deine Bühne im Sport. Hier treffen junge Talente, Profi-Spieler, Manager und Scouts aufeinander.
-Lade Videos hoch, verwalte deine Statistiken und werde entdeckt – egal, ob du im Fußball, Basketball, Boxen oder anderen Sportarten aktiv bist.
-</p>
+<header class="hero">
+<div class="hero-content">
+<h1 class="logo">MetoSports</h1>
+<p class="slogan">Deine Bühne im Sport – Zeig dein Talent</p>
+<a href="#newsletter" class="cta-button">Jetzt vormerken</a>
+</div>
+</header>
 
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1000px; margin: auto;">
-<div class="fade-in" style="flex: 1 1 220px; background-color: #1a1a1a; padding: 20px; border-radius: 8px;">
-<h3>Video-Upload</h3>
-<p>Teile deine besten Momente direkt mit Scouts & Managern.</p>
-</div>
-<div class="fade-in" style="flex: 1 1 220px; background-color: #1a1a1a; padding: 20px; border-radius: 8px;">
-<h3>Scouting-Zugang</h3>
-<p>Werde weltweit entdeckt und kontaktiert.</p>
-</div>
-<div class="fade-in" style="flex: 1 1 220px; background-color: #1a1a1a; padding: 20px; border-radius: 8px;">
-<h3>Statistiken</h3>
-<p>Zeige deine Leistungen und Entwicklung schwarz auf weiß.</p>
-</div>
-<div class="fade-in" style="flex: 1 1 220px; background-color: #1a1a1a; padding: 20px; border-radius: 8px;">
-<h3>Nachrichten</h3>
-<p>Direkte Kommunikation zwischen Spieler, Manager & Scout.</p>
-</div>
-<div class="fade-in" style="flex: 1 1 220px; background-color: #1a1a1a; padding: 20px; border-radius: 8px;">
-<h3>Mehrsprachigkeit</h3>
-<p>Nutzbar in Deutsch, Englisch, Spanisch, Türkisch uvm.</p>
-</div>
-<div class="fade-in" style="flex: 1 1 220px; background-color: #1a1a1a; padding: 20px; border-radius: 8px;">
-<h3>Alle Sportarten</h3>
-<p>Fußball, Basketball, Boxen, Leichtathletik und mehr.</p>
-</div>
-</div>
-
-<div class="fade-in" style="margin-top: 40px;">
-<a href="register.html" style="background-color: #fff; color: #000; padding: 12px 28px; font-weight: bold; border-radius: 6px; text-decoration: none;">
-Jetzt kostenlos registrieren
-</a>
-</div>
+<section class="intro">
+<h2>Was ist MetoSports?</h2>
+<p>MetoSports ist die Plattform für Sporttalente. Lade deine Highlights hoch, analysiere deine Leistung – und werde entdeckt.</p>
 </section>
 
-<script>
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-entry.target.classList.add("visible");
-}
-});
-});
+<section class="audience">
+<h2>Für wen ist MetoSports?</h2>
+<ul>
+<li>Talente</li>
+<li>Vereine</li>
+<li>Scouts</li>
+<li>Fans</li>
+</ul>
+</section>
 
-document.querySelectorAll(".fade-in").forEach(el => {
-observer.observe(el);
-});
-</script>
+<section class="features">
+<h2>Funktionen</h2>
+<ul>
+<li>Video-Upload</li>
+<li>Statistiken & Marktwerte</li>
+<li>Scouting-Zugang</li>
+<li>Multisport-Unterstützung</li>
+</ul>
+</section>
+
+<section class="security">
+<h2>Vertrauen & Sicherheit</h2>
+<p>Deine Daten sind sicher. Deine Leistung gehört dir.</p>
+</section>
+
+<section class="newsletter" id="newsletter">
+<h2>Bleib informiert</h2>
+<form>
+<input type="email" placeholder="Deine E-Mail-Adresse" required>
+<button type="submit">Jetzt vormerken</button>
+</form>
+</section>
+
+<footer class="footer">
+<p>©️ 2025 MetoSports</p>
+<p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+<p>kontakt@meto-sports.com</p>
+</footer>
+
+</body>
+</html>
