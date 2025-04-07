@@ -1,174 +1,193 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>MetoSports – Startseite</title>
-<style>
-body {
-margin: 0;
-font-family: 'Segoe UI', sans-serif;
-background-color: #000;
-color: #fff;
-}
-
-header {
-background-color: #111;
-padding: 20px 40px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-nav {
-display: flex;
-gap: 20px;
-}
-
-nav a {
-color: #fff;
-text-decoration: none;
-font-size: 14px;
-}
-
-#languageSwitcher {
-background-color: #222;
-color: #fff;
-border: none;
-padding: 5px;
-border-radius: 4px;
-}
-
-main {
-padding: 60px 40px;
-text-align: center;
-}
-
-footer {
-background-color: #111;
-color: #aaa;
-text-align: center;
-padding: 20px;
-font-size: 14px;
-}
-</style>
+ <select id="languageSwitcher">
+ <option value="de">Deutsch</option>
+ <option value="en">English</option>
+ <option value="tr">Türkisch</option>
+ </select>
+ 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MetoSports</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-<div class="logo">MetoSports</div>
-<nav>
-<a href="talent.html" id="navTalent">Talent</a>
-<a href="manager.html" id="navManager">Manager</a>
-<a href="scouting.html" id="navScouting">Scouting</a>
-<a href="stats.html" id="navStats">Statistik</a>
-<a href="register.html" id="navRegister">Registrieren</a>
-<select id="languageSwitcher">
-<option value="de">Deutsch</option>
-<option value="en">English</option>
-<option value="es">Español</option>
-<option value="fr">Français</option>
-<option value="tr">Türkçe</option>
-<option value="pt">Português</option>
-<option value="ar">العربية</option>
-</select>
+<header class="hero">
+ 
+<nav class="main-nav">
+<a href="index.html">Start</a>
+<a href="manager.html">Manager</a>
+<a href="vereine.html">Vereine</a>
+<a href="scouts.html">Scouts</a>
+<a href="fans.html">Fans</a>
 </nav>
+ 
+<div class="hero-content">
+<h1 class="logo">MetoSports</h1>
+<p class="slogan">Deine Bühne im Sport – Zeig dein Talent</p>
+<a href="#newsletter" class="cta-button">Jetzt vormerken</a>
+</div>
 </header>
 
-<main>
-<h1 id="slogan">Deine Bühne im Sport – Zeig dein Talent</h1>
-</main>
+<section class="intro">
+<h2>Was ist MetoSports?</h2>
+<p>MetoSports ist die Plattform für Sporttalente. Lade deine Highlights hoch, analysiere deine Leistung – und werde entdeckt.</p>
+</section>
 
-<footer>
-<a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">Kontakt</a>
-<div>&copy; 2025 MetoSports</div>
+<section class="audience">
+<h2>Für wen ist MetoSports?</h2>
+<ul>
+<li>Talente</li>
+<li>Vereine</li>
+<li>Scouts</li>
+<li>Fans</li>
+</ul>
+</section>
+
+<section class="features">
+<h2>Funktionen</h2>
+<ul>
+<li>Video-Upload</li>
+<li>Statistiken & Marktwerte</li>
+<li>Scouting-Zugang</li>
+<li>Multisport-Unterstützung</li>
+</ul>
+</section>
+
+<section class="security">
+<h2>Vertrauen & Sicherheit</h2>
+<p>Deine Daten sind sicher. Deine Leistung gehört dir.</p>
+</section>
+
+<section class="newsletter" id="newsletter">
+<h2>Bleib informiert</h2>
+<form>
+<input type="email" placeholder="Deine E-Mail-Adresse" required>
+<button type="submit">Jetzt vormerken</button>
+</form>
+</section>
+
+<footer class="footer">
+<p>©️ 2025 MetoSports</p>
+<p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+<p>kontakt@meto-sports.com</p>
 </footer>
 
 <script>
-const translations = {
-de: {
-slogan: "Deine Bühne im Sport – Zeig dein Talent",
-navTalent: "Talent",
-navManager: "Manager",
-navScouting: "Scouting",
-navStats: "Statistik",
-navRegister: "Registrieren"
-},
-en: {
-slogan: "Your stage in sports – Show your talent",
-navTalent: "Talent",
-navManager: "Manager",
-navScouting: "Scouting",
-navStats: "Statistics",
-navRegister: "Register"
-},
-es: {
-slogan: "Tu escenario en el deporte – Muestra tu talento",
-navTalent: "Talento",
-navManager: "Manager",
-navScouting: "Scouting",
-navStats: "Estadísticas",
-navRegister: "Registrarse"
-},
-fr: {
-slogan: "Ta scène dans le sport – Montre ton talent",
-navTalent: "Talent",
-navManager: "Manager",
-navScouting: "Détection",
-navStats: "Statistiques",
-navRegister: "S'inscrire"
-},
-tr: {
-slogan: "Spordaki sahnen – Yeteneklerini göster",
-navTalent: "Yetenek",
-navManager: "Menajer",
-navScouting: "Gözlem",
-navStats: "İstatistik",
-navRegister: "Kayıt Ol"
-},
-pt: {
-slogan: "O seu palco no desporto – Mostre o seu talento",
-navTalent: "Talento",
-navManager: "Gestor",
-navScouting: "Scouting",
-navStats: "Estatísticas",
-navRegister: "Registar"
-},
-ar: {
-slogan: "منصتك في الرياضة – أظهر موهبتك",
-navTalent: "الموهبة",
-navManager: "مدير",
-navScouting: "استكشاف",
-navStats: "الإحصائيات",
-navRegister: "تسجيل"
-}
-};
-
-const elements = ["slogan", "navTalent", "navManager", "navScouting", "navStats", "navRegister"];
-const switcher = document.getElementById("languageSwitcher");
-
-function updateLanguage(lang) {
-const t = translations[lang];
-elements.forEach(id => {
-const el = document.getElementById(id);
-if (el) el.textContent = t[id];
-});
-localStorage.setItem("lang", lang);
-}
-
-switcher.addEventListener("change", () => {
-updateLanguage(switcher.value);
-});
-
-const savedLang = localStorage.getItem("lang") || "de";
-switcher.value = savedLang;
-updateLanguage(savedLang);
+ const observer = new IntersectionObserver(entries =>{
+ entries.forEach(enty => {
+  entry.target.classlist.add("visible");
+ }
+ });
+ });
+ document.querySelectorAll(".fade-in").forEach(el=> {
+  observer.observe(el);
+ });
 </script>
-
-<!-- Navigation -->
-<nav>
- <a href="manager.html">manager</a>
-</nav>
-
+ 
 </body>
 </html>
+
+
+body {
+margin: 0;
+font-family: 'Arial', sans-serif;
+background-color: #0d0d0d;
+color: #ffffff;
+line-height: 1.6;
+}
+
+a {
+color: orange;
+text-decoration: none;
+}
+
+.hero {
+height: 100vh;
+background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 0 20px;
+}
+
+.hero-content {
+max-width: 600px;
+}
+
+.logo {
+font-size: 3rem;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+.slogan {
+font-size: 1.5rem;
+margin: 20px 0;
+}
+
+.cta-button {
+display: inline-block;
+padding: 12px 24px;
+background-color: orange;
+color: black;
+font-weight: bold;
+border-radius: 8px;
+transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+background-color: #ff9900;
+}
+
+section {
+padding: 60px 20px;
+max-width: 800px;
+margin: auto;
+text-align: center;
+}
+
+ul {
+list-style: none;
+padding: 0;
+}
+
+ul li {
+margin: 10px 0;
+font-size: 1.2rem;
+}
+
+.newsletter form {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+}
+
+.newsletter input[type="email"] {
+padding: 10px;
+width: 250px;
+border-radius: 5px;
+border: none;
+}
+
+.newsletter button {
+padding: 10px 20px;
+background-color: orange;
+color: black;
+font-weight: bold;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.footer {
+text-align: center;
+padding: 40px 20px;
+background-color: #1a1a1a;
+font-size: 0.9rem;
+color: #bbb;
+}
