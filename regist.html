@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Registrieren – MetoSports</title>
+<style>
+body {
+background-color: #000;
+color: #fff;
+font-family: 'Segoe UI', sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+
+.register-box {
+background-color: #1a1a1a;
+padding: 40px;
+border-radius: 10px;
+width: 100%;
+max-width: 450px;
+box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.register-box h2 {
+margin-bottom: 30px;
+text-align: center;
+}
+
+.register-box input, .register-box select {
+width: 100%;
+padding: 12px;
+margin: 10px 0;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+}
+
+.register-box label {
+font-size: 14px;
+}
+
+.register-box button {
+width: 100%;
+padding: 12px;
+background-color: #fff;
+color: #000;
+border: none;
+border-radius: 5px;
+font-weight: bold;
+font-size: 16px;
+cursor: pointer;
+margin-top: 20px;
+}
+
+.register-box p {
+text-align: center;
+margin-top: 20px;
+font-size: 14px;
+}
+
+.register-box a {
+color: #66ccff;
+text-decoration: none;
+}
+
+.checkbox {
+margin-top: 10px;
+font-size: 13px;
+display: flex;
+align-items: center;
+}
+
+.checkbox input {
+margin-right: 10px;
+}
+</style>
+</head>
+<body>
+<div class="register-box">
+<h2>Jetzt registrieren</h2>
+<form action="nachrichten.html">
+<input type="text" placeholder="Name" required />
+<input type="email" placeholder="E-Mail" required />
+<input type="password" placeholder="Passwort" required />
+<select required>
+<option value="">Rolle wählen</option>
+<option value="talent">Talent</option>
+<option value="manager">Manager</option>
+<option value="scout">Scout</option>
+<option value="trainer">Trainer</option>
+</select>
+<div class="checkbox">
+<input type="checkbox" required />
+<label>Ich akzeptiere die <a href="#">Datenschutzbestimmungen</a></label>
+</div>
+<button type="submit">Registrieren</button>
+</form>
+<p>Du hast schon ein Konto? <a href="login.html">Jetzt einloggen</a></p>
+</div>
+</body>
+</html>
