@@ -1,1 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Login – MetoSports</title>
+<style>
+body {
+background-color: #000;
+color: #fff;
+font-family: 'Segoe UI', sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
 
+.login-box {
+background-color: #1a1a1a;
+padding: 40px;
+border-radius: 10px;
+width: 100%;
+max-width: 400px;
+box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.login-box h2 {
+margin-bottom: 30px;
+text-align: center;
+}
+
+.login-box input {
+width: 100%;
+padding: 12px;
+margin: 10px 0;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+}
+
+.login-box button {
+width: 100%;
+padding: 12px;
+background-color: #fff;
+color: #000;
+border: none;
+border-radius: 5px;
+font-weight: bold;
+font-size: 16px;
+cursor: pointer;
+margin-top: 20px;
+}
+
+.login-box p {
+text-align: center;
+margin-top: 20px;
+font-size: 14px;
+}
+
+.login-box a {
+color: #66ccff;
+text-decoration: none;
+}
+</style>
+</head>
+<body>
+<div class="login-box">
+<h2>MetoSports Login</h2>
+<input type="text" id="username" placeholder="Name eingeben" required />
+<input type="password" placeholder="Passwort" required />
+<button onclick="login()">Einloggen</button>
+<p>Du hast noch kein Konto? <a href="registrieren.html">Jetzt registrieren</a></p>
+</div>
+
+<script>
+function login() {
+const name = document.getElementById("username").value;
+if (name) {
+localStorage.setItem("nutzername", name);
+window.location.href = "index.html";
+} else {
+alert("Bitte Namen eingeben.");
+}
+}
+</script>
+</body>
+</html>
+
+Login Speicherung Weiterleitung
+
+localStorage.setItem("nutzername", "Max Mustermann");
+window.location.href = "index.html";
+
+Simulierte Login
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Statistik – MetoSports</title>
+<style>
+body {
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+background-color: #000;
+color: #fff;
+}
+
+header {
+background-color: #111;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 40px;
+}
+
+.logo {
+font-size: 20px;
+font-weight: bold;
+}
+
+nav {
+display: flex;
+gap: 20px;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+font-size: 16px;
+}
+
+.content {
+padding: 60px 20px;
+text-align: center;
+}
+
+.content h1 {
+font-size: 36px;
+margin-bottom: 20px;
+}
+
+.stats-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px;
+margin-top: 40px;
+}
+
+.stat-box {
+background-color: #1a1a1a;
+padding: 30px;
+border-radius: 10px;
+width: 280px;
+box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.stat-box h2 {
+font-size: 22px;
+margin-bottom: 10px;
+}
+
+.stat-box p {
+font-size: 16px;
+color: #ccc;
+}
+
+footer {
+background-color: #111;
+padding: 20px;
+text-align: center;
+color: #aaa;
+margin-top: 40px;
+}
+
+footer a {
+color: #aaa;
+margin: 0 10px;
+text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">MetoSports</div>
+<nav>
+<a href="index.html">Startseite</a>
+<a href="talente.html">Talente</a>
+<a href="profis.html">Profis</a>
+<a href="manager.html">Manager</a>
+<a href="scouting.html">Scouting</a>
+<a href="nachrichten.html">Nachrichten</a>
+</nav>
+</header>
+
+<section class="content">
+<h1>Spielerstatistiken im Überblick</h1>
+<div class="stats-container">
+<div class="stat-box">
+<h2>Top-Talent: Leon H.</h2>
+<p>14 Tore in 9 Spielen<br/>Zweikampfquote: 83%</p>
+</div>
+<div class="stat-box">
+<h2>Schnellster Spieler</h2>
+<p>36,2 km/h – Sprintgeschwindigkeit<br/>Sportart: Leichtathletik</p>
+</div>
+<div class="stat-box">
+<h2>Meiste Assists</h2>
+<p>10 Torvorlagen in 12 Spielen<br/>Spielmacher: Aylin B.</p>
+</div>
+<div class="stat-box">
+<h2>Boxen: K.-o.-Bilanz</h2>
+<p>7 Kämpfe – 6 K.-o.-Siege<br/>Athlet: Murat K.</p>
+</div>
+</div>
+</section>
+
+<footer>
+<a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">Kontakt</a>
+<div>&copy; 2025 MetoSports</div>
+</footer>
+
+</body>
+</html>
