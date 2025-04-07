@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
 <title>MetoSports</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 * {
 margin: 0;
@@ -20,23 +20,22 @@ color: #fff;
 header {
 position: relative;
 height: 100vh;
-background: url('https://images.unsplash.com/photo-1603468621808-44c970f60b52?fit=crop&w=1600&q=80') no-repeat center center/cover;
+background: url('https://images.unsplash.com/photo-1599058917212-d750089bc07f?fit=crop&w=1600&q=80') no-repeat center center/cover;
 }
 
 .overlay {
 position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: rgba(0, 0, 0, 0.6);
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0, 0, 0, 0.65);
+z-index: 1;
 }
 
 .logo-container {
 position: absolute;
 top: 20px;
 left: 20px;
-z-index: 3;
+z-index: 2;
 display: flex;
 align-items: center;
 }
@@ -49,23 +48,21 @@ margin-right: 10px;
 .logo-container span {
 font-size: 1.5rem;
 font-weight: bold;
-color: #fff;
+color: #ccc;
 }
 
 nav {
 position: absolute;
-top: 20px;
+top: 30px;
 right: 30px;
-display: flex;
-gap: 30px;
-z-index: 3;
+z-index: 2;
 }
 
 nav a {
-color: white;
+margin-left: 20px;
 text-decoration: none;
+color: #fff;
 font-weight: bold;
-font-size: 1rem;
 transition: color 0.3s ease;
 }
 
@@ -74,32 +71,34 @@ color: orange;
 }
 
 .hero-content {
-position: relative;
-z-index: 2;
+position: absolute;
 top: 50%;
-transform: translateY(-50%);
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 2;
 text-align: center;
+max-width: 600px;
 padding: 0 20px;
 }
 
 .hero-content h1 {
 font-size: 3rem;
-font-weight: bold;
+margin-bottom: 20px;
 }
 
 .hero-content p {
-font-size: 1.5rem;
-margin: 20px 0;
+font-size: 1.3rem;
+margin-bottom: 30px;
 }
 
 .cta-button {
+padding: 12px 24px;
 background-color: orange;
 color: black;
-padding: 12px 24px;
 font-weight: bold;
-border: none;
-border-radius: 6px;
 font-size: 1rem;
+border: none;
+border-radius: 5px;
 text-decoration: none;
 transition: background 0.3s ease;
 }
@@ -113,13 +112,13 @@ display: flex;
 flex-wrap: wrap;
 justify-content: center;
 padding: 60px 20px;
-gap: 30px;
 background-color: #111;
+gap: 30px;
 }
 
 .feature-box {
 background: #1a1a1a;
-padding: 30px;
+padding: 25px;
 border-radius: 10px;
 text-align: center;
 flex: 1 1 200px;
@@ -129,11 +128,6 @@ transition: transform 0.3s ease;
 
 .feature-box:hover {
 transform: translateY(-5px);
-}
-
-.feature-box img {
-width: 50px;
-margin-bottom: 15px;
 }
 
 .feature-box h3 {
@@ -155,13 +149,11 @@ font-size: 0.9rem;
 <header>
 <div class="overlay"></div>
 
-<!-- Logo oben links -->
 <div class="logo-container">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAB1CAIAAAAjs4+ZA..." alt="MetoSports Logo"/>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAB1CAIAAAAjs4+ZA..." alt="MetoSports Logo">
 <span>MetoSports</span>
 </div>
 
-<!-- Navigation -->
 <nav>
 <a href="#">Talente</a>
 <a href="#">Manager</a>
@@ -169,35 +161,29 @@ font-size: 0.9rem;
 <a href="#">Registrieren</a>
 </nav>
 
-<!-- Slogan + CTA -->
 <div class="hero-content">
 <h1>Deine Bühne im Sport</h1>
-<p>Zeig dein Talent – werde entdeckt</p>
-<a href="#features" class="cta-button">Jetzt registrieren</a>
+<p>Zeig dein Talent auf MetoSports – Die Plattform für echte Spieler!</p>
+<a href="#features" class="cta-button">Jetzt durchstarten</a>
 </div>
 </header>
 
-<!-- Feature Sektion -->
 <section class="features" id="features">
 <div class="feature-box">
-<img src="https://img.icons8.com/ios-filled/50/upload.png" alt="Upload">
 <h3>Video-Upload</h3>
-<p>Lade deine besten Szenen hoch und werde entdeckt.</p>
+<p>Zeig deine Skills per Highlight-Video.</p>
 </div>
 <div class="feature-box">
-<img src="https://img.icons8.com/ios-filled/50/combo-chart.png" alt="Stats">
-<h3>Marktwerte</h3>
-<p>Verfolge deine Statistiken & deinen Marktwert.</p>
+<h3>Statistiken</h3>
+<p>Verfolge deine Entwicklung & Marktwert.</p>
 </div>
 <div class="feature-box">
-<img src="https://img.icons8.com/ios-filled/50/search.png" alt="Scouting">
 <h3>Scouting</h3>
-<p>Vereine & Scouts finden gezielt Talente.</p>
+<p>Werde von Vereinen & Scouts gefunden.</p>
 </div>
 <div class="feature-box">
-<img src="https://img.icons8.com/ios-filled/50/basketball.png" alt="Multisport">
 <h3>Multisport</h3>
-<p>Unterstützt Fußball, Basketball, Handball & mehr.</p>
+<p>Fußball, Basketball, Handball & mehr.</p>
 </div>
 </section>
 
