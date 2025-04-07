@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scouting – MetoSports</title>
+<style>
+body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #000; color: #fff; }
 
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #111;
+padding: 20px 40px;
+}
+
+.logo { font-size: 20px; font-weight: bold; }
+
+nav { display: flex; gap: 20px; justify-content: center; flex: 1; }
+
+nav a {
+color: #fff;
+text-decoration: none;
+font-size: 16px;
+}
+
+.register-button {
+padding: 10px 20px;
+background-color: #fff;
+color: #000;
+border: none;
+border-radius: 5px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.hero {
+background: url('https://images.unsplash.com/photo-1580234758340-4e73f1eaa5f6?auto=format&fit=crop&w=1950&q=80') center center/cover no-repeat;
+padding: 140px 20px 100px;
+text-align: center;
+position: relative;
+}
+
+.hero::before {
+content: "";
+position: absolute;
+top: 0; left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+position: relative;
+z-index: 1;
+}
+
+.hero h1 {
+font-size: 40px;
+margin: 0;
+}
+
+.hero p {
+font-size: 20px;
+color: #ccc;
+margin-top: 10px;
+}
+
+.section {
+padding: 60px 20px;
+text-align: center;
+background-color: #111;
+}
+
+.section h2 {
+font-size: 28px;
+margin-bottom: 20px;
+}
+
+.section p {
+max-width: 700px;
+margin: 0 auto;
+font-size: 16px;
+color: #ccc;
+}
+
+.verified {
+background-color: #000;
+text-align: center;
+padding: 20px;
+color: #66ff66;
+font-weight: bold;
+}
+
+.cta, .favorites {
+text-align: center;
+padding: 40px;
+}
+
+.cta button, .favorites button {
+background-color: #fff;
+color: #000;
+padding: 15px 30px;
+border: none;
+font-weight: bold;
+font-size: 18px;
+border-radius: 5px;
+cursor: pointer;
+margin: 10px;
+}
+
+.success-stories {
+background-color: #111;
+text-align: center;
+padding: 50px 20px;
+}
+
+.success-stories h2 {
+font-size: 26px;
+margin-bottom: 20px;
+}
+
+.success-stories p {
+font-size: 15px;
+color: #ccc;
+}
+
+footer {
+background-color: #111;
+padding: 20px;
+text-align: center;
+font-size: 14px;
+color: #aaa;
+}
+
+footer a {
+color: #aaa;
+text-decoration: none;
+margin: 0 10px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">MetoSports</div>
+<nav>
+<a href="index.html">Startseite</a>
+<a href="talente.html">Talente</a>
+<a href="profis.html">Profis</a>
+<a href="manager.html">Manager</a>
+<a href="statistik.html">Statistik</a>
+<a href="nachrichten.html">Nachrichten</a>
+</nav>
+<button class="register-button">Registrieren</button>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Scouting neu gedacht</h1>
+<p>Finden Sie Talente gezielt – durch Daten, Videos und Leistung.</p>
+</div>
+</section>
+
+<section class="section">
+<h2>Intelligente Filter und Suche</h2>
+<p>
+Nutzen Sie moderne Suchfunktionen: nach Alter, Region, Position, Sportart und Leistung. So finden Sie genau die Spieler,
+die zu Ihrem Team oder Projekt passen.
+</p>
+</section>
+
+<section class="section">
+<h2>Datenbasierte Entscheidungen</h2>
+<p>
+Spielerprofile beinhalten aktuelle Statistiken, Trainingsdaten und Highlights – alles auf einen Blick.
+Beurteilen Sie Potenzial objektiv und effizient.
+</p>
+</section>
+
+<section class="verified">
+Verifizierte Scouts & Trainer: Diese Profile wurden geprüft
+</section>
+
+<section class="cta">
+<button onclick="window.location.href='nachrichten.html'">Nachricht senden</button>
+<button onclick="window.location.href='kalender.html'">Events & Termine</button>
+</section>
+
+<section class="favorites">
+<button>Zu Favoriten hinzufügen</button>
+</section>
+
+<section class="success-stories">
+<h2>Erfolgsgeschichten</h2>
+<p>„Durch MetoSports habe ich mein Team gefunden – professionell, einfach und effektiv.“ – Scout Mario K.</p>
+</section>
+
+<footer>
+<a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">Kontakt</a>
+<div>&copy; 2025 MetoSports</div>
+</footer>
+
+</body>
+</html>
