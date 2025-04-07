@@ -21,7 +21,7 @@ line-height: 1.6;
 header {
 position: relative;
 height: 100vh;
-background: url('https://cdn.pixabay.com/photo/2019/07/02/19/25/basketball-4311017_1280.jpg') no-repeat center center/cover;
+background: url('https://cdn.pixabay.com/photo/2017/11/12/20/41/sport-2949312_1280.jpg') no-repeat center center/cover;
 }
 
 .overlay {
@@ -30,37 +30,36 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-background: rgba(0, 0, 0, 0.7);
+background: rgba(0, 0, 0, 0.65);
 }
 
-.logo-container {
+.topbar {
 position: absolute;
 top: 20px;
-left: 20px;
+left: 40px;
 z-index: 2;
 display: flex;
 align-items: center;
+gap: 15px;
 }
 
-.logo-container img {
-width: 60px;
-height: auto;
-margin-right: 10px;
+.topbar img {
+height: 50px;
 }
 
-.logo-container span {
-font-size: 1.8rem;
+.topbar span {
+font-size: 1.5rem;
 font-weight: bold;
-color: white;
+color: #fff;
 }
 
 nav {
 position: absolute;
 top: 20px;
-right: 30px;
-display: flex;
-gap: 30px;
+right: 40px;
 z-index: 2;
+display: flex;
+gap: 25px;
 }
 
 nav a {
@@ -84,9 +83,14 @@ text-align: center;
 padding: 0 20px;
 }
 
-.slogan {
-font-size: 2rem;
-margin-bottom: 30px;
+.hero-content h1 {
+font-size: 3rem;
+font-weight: bold;
+}
+
+.hero-content p {
+font-size: 1.5rem;
+margin: 20px 0;
 }
 
 .cta-button {
@@ -138,17 +142,6 @@ color: orange;
 margin-bottom: 10px;
 }
 
-.sponsor-section {
-background-color: #0d0d0d;
-padding: 40px 20px;
-text-align: center;
-}
-
-.sponsor-section img {
-max-width: 150px;
-margin: 10px;
-}
-
 footer {
 background-color: #1a1a1a;
 text-align: center;
@@ -163,51 +156,46 @@ font-size: 0.9rem;
 <header>
 <div class="overlay"></div>
 
-<div class="logo-container">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAB1CAIAAAAjs4+ZAAAACXBIWXMAAA7EAAAOxAGVKw4bAAA..." alt="MetoSports Logo" />
+<div class="topbar">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAB1CAIAAAAjs4+Z..." alt="MetoSports Logo" />
 <span>MetoSports</span>
 </div>
 
 <nav>
-<a href="#">Talente</a>
-<a href="#">Manager</a>
-<a href="#">Scouting</a>
-<a href="#">Registrieren</a>
+<a href="#talente">Talente</a>
+<a href="#manager">Manager</a>
+<a href="#scouting">Scouting</a>
+<a href="#registrieren">Registrieren</a>
 </nav>
 
 <div class="hero-content">
-<div class="slogan">Deine Bühne im Sport – Zeig dein Talent</div>
+<h1>Deine Bühne im Sport</h1>
+<p>Zeig dein Talent und erreiche dein Ziel mit MetoSports</p>
 <a href="#features" class="cta-button">Jetzt registrieren</a>
 </div>
 </header>
 
 <section class="features" id="features">
 <div class="feature-box">
-<img src="https://img.icons8.com/ios-filled/50/upload.png" alt="Upload">
+<img src="https://img.icons8.com/ios-filled/50/upload.png" alt="Upload" />
 <h3>Video-Upload</h3>
 <p>Lade deine besten Szenen hoch und werde entdeckt.</p>
 </div>
 <div class="feature-box">
-<img src="https://img.icons8.com/ios-filled/50/combo-chart.png" alt="Stats">
+<img src="https://img.icons8.com/ios-filled/50/combo-chart.png" alt="Stats" />
 <h3>Marktwerte</h3>
 <p>Verfolge deine Statistiken & deinen Marktwert.</p>
 </div>
 <div class="feature-box">
-<img src="https://img.icons8.com/ios-filled/50/search.png" alt="Scouting">
+<img src="https://img.icons8.com/ios-filled/50/search.png" alt="Scouting" />
 <h3>Scouting</h3>
 <p>Vereine & Scouts finden gezielt Talente.</p>
 </div>
 <div class="feature-box">
-<img src="https://img.icons8.com/ios-filled/50/basketball.png" alt="Sportarten">
+<img src="https://img.icons8.com/ios-filled/50/basketball.png" alt="Sportarten" />
 <h3>Multisport</h3>
-<p>Unterstützt Fußball, Basketball, Tennis u.v.m.</p>
+<p>Unterstützt Fußball, Basketball, Volleyball u.v.m.</p>
 </div>
-</section>
-
-<section class="sponsor-section">
-<p>Unsere Partner:</p>
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_Nike.svg" alt="Nike">
-<img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Adidas_Logo.svg" alt="Adidas">
 </section>
 
 <footer>
